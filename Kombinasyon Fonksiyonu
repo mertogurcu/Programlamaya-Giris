@@ -1,0 +1,38 @@
+package kombinasyon;
+import java.util.Scanner;
+
+public class KombinasyonFonksiyonu {
+
+	public static void main(String[] args) {
+		
+		Scanner sayilar = new Scanner(System.in);
+		
+		System.out.println("Birinci Sayıyı Giriniz");
+		int ilkSayi = sayilar.nextInt();
+		System.out.println("İkinci Sayıyı Giriniz");
+		int ikinciSayi = sayilar.nextInt();
+		
+		int ust = faktoriyelAl(ilkSayi);
+		int alt = faktoriyelAl(ikinciSayi) * faktoriyelAl(ilkSayi-ikinciSayi);
+		
+		
+		System.out.println("Kombinasyon Sonucu = " + ust/alt); 
+
+		
+		
+		
+	}
+	
+	
+	public static int faktoriyelAl(int x){
+	
+		int faktorSonuc=1;
+	    for(int i=1;i<=x;i++){
+	        faktorSonuc=faktorSonuc*i;
+	    }
+	       
+	    return faktorSonuc;
+	}
+	
+
+}
